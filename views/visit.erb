@@ -1,0 +1,36 @@
+<h2>make an appointment with a hairdresser</h2>
+
+<form action="/visit" method="POST">
+
+ <div class="form-group">
+    <label>Your name:</label>
+    <input name="user_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your name">
+    </div>
+
+ <div class="form-group">
+    <label>Your phone number:</label>
+    <input name="phone" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your phone">
+    </div>
+
+ <div class="form-group">
+    <label>When to wait for you?</label>
+    <input name="date_time" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter date and time">
+    </div>
+
+    <label>Please select a hairdresser:<br>
+  <select name="hairdresser" size=2>
+      
+      <option value="walter">Walter White</option>
+      <option value="jessie">Jessie Pinkman</option>
+      <option value="gus" disabled>Gus Fring</option>
+    
+  </select>
+</label><br>
+
+ <button type="submit" class="btn btn-primary">Sign Up</button>
+
+</form>
+
+<h1><%= @title %></h1><br>
+
+<p><%= @message %></p>
