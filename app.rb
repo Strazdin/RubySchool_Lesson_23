@@ -25,9 +25,9 @@ end
 
 post '/visit' do
 
-	@user_name = params[:user_name]
-    @phone     = params[:phone]
-    @date_time = params[:date_time]
+	@user_name   = params[:user_name]
+    @phone       = params[:phone]
+    @date_time   = params[:date_time]
 	@hairdresser = params[:hairdresser]
 
 	@title   = 'Thank you!'
