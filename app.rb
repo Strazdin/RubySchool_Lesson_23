@@ -29,12 +29,13 @@ post '/visit' do
     @phone       = params[:phone]
     @date_time   = params[:date_time]
 	@hairdresser = params[:hairdresser]
+	@color		 = params[:color]
 
 	@title   = 'Thank you!'
-    @message = "Dear #{@user_name}, we'll be wating for you at #{@date_time} at the selected hairdresser #{@hairdresser}"
+    @message = "Dear #{@user_name}, we'll be wating for you at #{@date_time} at the selected hairdresser #{@hairdresser}. Color #{@color}"
 
-    f = File.open './public/vendor/contacts.txt', 'a'
-    f.write "User: #{@user_name} Phone: #{@phone} Date and time: #{@date_time}Hairdresser: #{@hairdresser}\n"
+    f = File.open './public/contacts.txt', 'a'
+    f.write "User: #{@user_name}, Phone: #{@phone}, Date and time: #{@date_time}, Hairdresser: #{@hairdresser}, Color: #{@color}\n"
     f.close
 
 
